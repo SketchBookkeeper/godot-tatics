@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bmlpvkagkm182"]
+
+[ext_resource type="Material" uid="uid://cy5dxpmtxc1p6" path="res://Materials/Ally.tres" id="1_rxyvo"]
+[ext_resource type="Material" uid="uid://tbf5x247r47x" path="res://Materials/Eyes.tres" id="2_a87hg"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_2cjux"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_w7v1s"]
+
+[node name="Hero" type="Node3D" unique_id=1745342815]
+
+[node name="Jumper" type="Node3D" parent="." unique_id=1420882963]
+
+[node name="Body" type="MeshInstance3D" parent="Jumper" unique_id=1483676724]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = SubResource("SphereMesh_2cjux")
+surface_material_override/0 = ExtResource("1_rxyvo")
+
+[node name="Eye" type="MeshInstance3D" parent="Jumper/Body" unique_id=1459172627]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.17, 0.32, 0.3)
+material_override = ExtResource("2_a87hg")
+mesh = SubResource("SphereMesh_w7v1s")
+
+[node name="Eye2" type="MeshInstance3D" parent="Jumper/Body" unique_id=708809662]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.17, 0.32, 0.3)
+material_override = ExtResource("2_a87hg")
+mesh = SubResource("SphereMesh_w7v1s")
